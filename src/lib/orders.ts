@@ -31,8 +31,18 @@ export async function createOrder({ userId, addressId, requestedItems }: { userI
   return data;
 }
 
+export class OrdersUnavailableError extends Error {
+  constructor(message = "Orders are unavailable until the database schema is applied.") {
+    super(message);
+    this.name = "OrdersUnavailableError";
+  }
+}
+
 export async function getCustomerOrders(userId: string) {
   const { data, error } = await createSupabaseAdminClient().from("orders").select("*").eq("user_id", userId).order("created_at", { ascending: false });
-  if (error) throw error;
+  if (error) {
+    if (error.code === "PGRST205") throw new OrdersUnavailableError();
+    throw error;
+  }
   return data;
 }

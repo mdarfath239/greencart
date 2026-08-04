@@ -19,7 +19,12 @@ export async function GET() {
       .eq("user_id", userId)
       .order("created_at", { ascending: false });
 
-    if (error) throw error;
+    if (error) {
+      if (error.code === "PGRST205") {
+        return NextResponse.json({ error: "Database setup required. Run npm run db:setup after adding DATABASE_URL." }, { status: 503 });
+      }
+      throw error;
+    }
     return NextResponse.json({ addresses: data });
   } catch (error) {
     console.error("Unable to load addresses", error);
@@ -43,7 +48,12 @@ export async function POST(request: Request) {
       .select("*")
       .single();
 
-    if (error) throw error;
+    if (error) {
+      if (error.code === "PGRST205") {
+        return NextResponse.json({ error: "Database setup required. Run npm run db:setup after adding DATABASE_URL." }, { status: 503 });
+      }
+      throw error;
+    }
     return NextResponse.json({ address: data }, { status: 201 });
   } catch (error) {
     console.error("Unable to create address", error);

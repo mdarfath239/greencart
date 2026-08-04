@@ -1,0 +1,45 @@
+import type { Database } from "@/lib/database.types";
+
+type Product = Database["public"]["Tables"]["products"]["Row"];
+
+export const seededProducts: Product[] = [
+  { id: "potato-500g", name: "Potato 500g", description: "Clean, firm potatoes that cook beautifully for fries, curries, and roast trays.", price: 40, offer_price: 35, category: "Vegetables", image_urls: ["/images/organic_vegitable_image.png"], in_stock: true, seller_id: "demo-seller", created_at: "2026-01-01T00:00:00Z" },
+  { id: "tomato-1kg", name: "Tomato 1 kg", description: "Juicy red tomatoes with a balanced tang for salads, sauces, and daily cooking.", price: 30, offer_price: 28, category: "Vegetables", image_urls: ["/images/tomato_image.png"], in_stock: true, seller_id: "demo-seller", created_at: "2026-01-02T00:00:00Z" },
+  { id: "carrot-500g", name: "Carrot 500g", description: "Sweet, crunchy carrots picked for soups, stir-fries, and lunchbox snacking.", price: 50, offer_price: 44, category: "Vegetables", image_urls: ["/images/carrot_image.png"], in_stock: true, seller_id: "demo-seller", created_at: "2026-01-03T00:00:00Z" },
+  { id: "spinach-500g", name: "Spinach 500g", description: "Fresh leafy spinach with a tender bite, ideal for dals, saag, and smoothies.", price: 18, offer_price: 15, category: "Vegetables", image_urls: ["/images/organic_vegitable_image.png"], in_stock: true, seller_id: "demo-seller", created_at: "2026-01-04T00:00:00Z" },
+  { id: "onion-500g", name: "Onion 500g", description: "Kitchen-staple onions with great flavor and dependable freshness.", price: 50, offer_price: 45, category: "Vegetables", image_urls: ["/images/organic_vegitable_image.png"], in_stock: true, seller_id: "demo-seller", created_at: "2026-01-05T00:00:00Z" },
+  { id: "apple-1kg", name: "Apple 1 kg", description: "Crisp apples with a sweet bite and bright finish for everyday fruit bowls.", price: 100, offer_price: 90, category: "Fresh Fruits", image_urls: ["/images/apple_image.png"], in_stock: true, seller_id: "demo-seller", created_at: "2026-01-06T00:00:00Z" },
+  { id: "amul-milk-1l", name: "Amul Milk 1L", description: "Fresh daily milk for tea, breakfast, and home cooking.", price: 60, offer_price: 55, category: "Dairy", image_urls: ["/images/dairy_product_image.png"], in_stock: true, seller_id: "demo-seller", created_at: "2026-01-07T00:00:00Z" },
+  { id: "coca-cola-15l", name: "Coca-Cola 1.5L", description: "Chilled-party favorite with classic fizz and bold refreshment.", price: 80, offer_price: 75, category: "Cold Drinks", image_urls: ["/images/bottles_image.png"], in_stock: true, seller_id: "demo-seller", created_at: "2026-01-08T00:00:00Z" },
+  { id: "basmati-rice-5kg", name: "Basmati Rice 5kg", description: "Long-grain basmati with fragrant aroma and fluffy texture.", price: 550, offer_price: 520, category: "Grains", image_urls: ["/images/basmati_rice_image.png"], in_stock: true, seller_id: "demo-seller", created_at: "2026-01-09T00:00:00Z" },
+  { id: "brown-bread-400g", name: "Brown Bread 400g", description: "Soft sliced bread for sandwiches, toast, and quick breakfasts.", price: 40, offer_price: 35, category: "Bakery", image_urls: ["/images/bakery_image.png"], in_stock: true, seller_id: "demo-seller", created_at: "2026-01-10T00:00:00Z" },
+  { id: "maggi-noodles-280g", name: "Maggi Noodles 280g", description: "Quick comfort food for easy snacks and late-night cravings.", price: 55, offer_price: 50, category: "Instant Food", image_urls: ["/images/maggi_image.png"], in_stock: true, seller_id: "demo-seller", created_at: "2026-01-11T00:00:00Z" },
+  { id: "orange-1kg", name: "Orange 1 kg", description: "Bright citrus fruit with plenty of juice and natural sweetness.", price: 80, offer_price: 75, category: "Fresh Fruits", image_urls: ["/images/fresh_fruits_image.png"], in_stock: true, seller_id: "demo-seller", created_at: "2026-01-12T00:00:00Z" },
+  { id: "banana-1kg", name: "Banana 1 kg", description: "Reliable everyday bananas for breakfast bowls and smoothies.", price: 50, offer_price: 45, category: "Fresh Fruits", image_urls: ["/images/banana_image_1.png"], in_stock: true, seller_id: "demo-seller", created_at: "2026-01-13T00:00:00Z" },
+  { id: "mango-1kg", name: "Mango 1 kg", description: "Rich, fragrant mangoes with a smooth, sweet finish.", price: 150, offer_price: 140, category: "Fresh Fruits", image_urls: ["/images/fresh_fruits_image.png"], in_stock: true, seller_id: "demo-seller", created_at: "2026-01-14T00:00:00Z" },
+  { id: "grapes-500g", name: "Grapes 500g", description: "Seedless grapes with crisp skins and a juicy pop.", price: 70, offer_price: 65, category: "Fresh Fruits", image_urls: ["/images/fresh_fruits_image.png"], in_stock: true, seller_id: "demo-seller", created_at: "2026-01-15T00:00:00Z" },
+  { id: "paneer-200g", name: "Paneer 200g", description: "Soft, rich paneer perfect for curries, wraps, and snacks.", price: 90, offer_price: 85, category: "Dairy", image_urls: ["/images/paneer_image.png"], in_stock: true, seller_id: "demo-seller", created_at: "2026-01-16T00:00:00Z" },
+  { id: "eggs-12pcs", name: "Eggs 12 pcs", description: "Fresh farm eggs for protein-packed breakfasts and baking.", price: 90, offer_price: 85, category: "Dairy", image_urls: ["/images/dairy_product_image.png"], in_stock: true, seller_id: "demo-seller", created_at: "2026-01-17T00:00:00Z" },
+  { id: "cheese-200g", name: "Cheese 200g", description: "Mild, creamy cheese block for sandwiches and snacks.", price: 140, offer_price: 130, category: "Dairy", image_urls: ["/images/dairy_product_image.png"], in_stock: true, seller_id: "demo-seller", created_at: "2026-01-18T00:00:00Z" },
+  { id: "sprite-15l", name: "Sprite 1.5L", description: "Lemon-lime refreshment for meals, gatherings, and chilled breaks.", price: 75, offer_price: 60, category: "Cold Drinks", image_urls: ["/images/bottles_image.png"], in_stock: true, seller_id: "demo-seller", created_at: "2026-01-19T00:00:00Z" },
+  { id: "seven-up-15l", name: "7 Up 1.5L", description: "Cool, clean citrus soda with lively fizz.", price: 76, offer_price: 70, category: "Cold Drinks", image_urls: ["/images/bottles_image.png"], in_stock: true, seller_id: "demo-seller", created_at: "2026-01-20T00:00:00Z" },
+  { id: "fanta-15l", name: "Fanta 1.5L", description: "Bright orange soda that pairs well with weekend food spreads.", price: 70, offer_price: 65, category: "Cold Drinks", image_urls: ["/images/bottles_image.png"], in_stock: true, seller_id: "demo-seller", created_at: "2026-01-21T00:00:00Z" },
+  { id: "wheat-flour-5kg", name: "Wheat Flour 5kg", description: "Stone-ground flour for soft rotis, parathas, and baking.", price: 250, offer_price: 230, category: "Grains", image_urls: ["/images/grain_image.png"], in_stock: true, seller_id: "demo-seller", created_at: "2026-01-22T00:00:00Z" },
+  { id: "organic-quinoa-500g", name: "Organic Quinoa 500g", description: "Protein-rich quinoa for wholesome bowls and salads.", price: 450, offer_price: 420, category: "Grains", image_urls: ["/images/grain_image.png"], in_stock: true, seller_id: "demo-seller", created_at: "2026-01-23T00:00:00Z" },
+  { id: "brown-rice-1kg", name: "Brown Rice 1kg", description: "Nutty, hearty rice for healthy everyday meals.", price: 120, offer_price: 110, category: "Grains", image_urls: ["/images/grain_image.png"], in_stock: true, seller_id: "demo-seller", created_at: "2026-01-24T00:00:00Z" },
+  { id: "barley-1kg", name: "Barley 1kg", description: "Versatile grain for soups, salads, and hearty sides.", price: 150, offer_price: 140, category: "Grains", image_urls: ["/images/grain_image.png"], in_stock: true, seller_id: "demo-seller", created_at: "2026-01-25T00:00:00Z" },
+  { id: "butter-croissant-100g", name: "Butter Croissant 100g", description: "Flaky, buttery pastry with a crisp shell and soft center.", price: 50, offer_price: 45, category: "Bakery", image_urls: ["/images/bakery_image.png"], in_stock: true, seller_id: "demo-seller", created_at: "2026-01-26T00:00:00Z" },
+  { id: "knorr-cup-soup-70g", name: "Knorr Cup Soup 70g", description: "Comforting instant soup for quick warm breaks.", price: 35, offer_price: 30, category: "Instant Food", image_urls: ["/images/instant_food_image.png"], in_stock: true, seller_id: "demo-seller", created_at: "2026-01-27T00:00:00Z" },
+];
+
+export function getCategoryFallbackImage(category: string) {
+  const normalized = category.toLowerCase();
+  if (normalized.includes("fruit")) return "/images/fresh_fruits_image.png";
+  if (normalized.includes("vegetable")) return "/images/organic_vegitable_image.png";
+  if (normalized.includes("drink") || normalized.includes("beverage")) return "/images/bottles_image.png";
+  if (normalized.includes("dairy")) return "/images/dairy_product_image.png";
+  if (normalized.includes("bakery") || normalized.includes("bread")) return "/images/bakery_image.png";
+  if (normalized.includes("grain") || normalized.includes("rice") || normalized.includes("cereal")) return "/images/grain_image.png";
+  if (normalized.includes("instant")) return "/images/instant_food_image.png";
+  return "/images/apple_image.png";
+}

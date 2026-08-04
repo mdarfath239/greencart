@@ -12,7 +12,12 @@ export async function GET() {
     const { userId } = await auth();
     if (!userId) return NextResponse.json({ error: "Authentication is required." }, { status: 401 });
     const { data, error } = await createSupabaseAdminClient().from("orders").select("*").eq("user_id", userId).order("created_at", { ascending: false });
-    if (error) throw error;
+    if (error) {
+      if (error.code === "PGRST205") {
+        return NextResponse.json({ error: "Database setup required. Run npm run db:setup after adding DATABASE_URL." }, { status: 503 });
+      }
+      throw error;
+    }
     return NextResponse.json({ orders: data });
   } catch (error) {
     console.error("Unable to load orders", error);
